@@ -7,8 +7,10 @@ import Users from '../components/User/Users.vue'
 import Rights from '../components/power/Rights.vue'
 import Roles from '../components/power/Roles.vue'
 import Cate from '../components/goods/Cate.vue'
-import Params from '../components/goods/Params.vue'
-import Goods from '../components/goods/Goods.vue'
+import Params from '../components/goods/Params.vue' // 参数列表
+import GoodsList from '../components/goods/List.vue' // 商品列表
+import Add from '../components/goods/Add.vue' // 商品列表
+
 
 Vue.use(VueRouter)
 
@@ -43,15 +45,18 @@ const routes = [{
             name: 'roles',
             component: Roles
         }, {
-            path: '/categories',
+            path: '/categories', // 商品分类
             name: 'categories',
             component: Cate
         }, {
-            path: '/params',
+            path: '/params', // 参数列表
             component: Params
         }, {
-            path: '/goods',
-            component: Goods
+            path: '/goods', // 商品列表
+            component: GoodsList
+        }, {
+            path: '/goods/add', // 商品列表
+            component: Add
         }]
     }
 ]
