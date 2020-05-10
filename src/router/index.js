@@ -11,7 +11,7 @@ import Params from '../components/goods/Params.vue' // 参数列表
 import GoodsList from '../components/goods/List.vue' // 商品列表
 import Add from '../components/goods/Add.vue' // 商品列表
 import Order from '../components/order/Order.vue' // 订单管理
-
+import Report from '../components/report/report.vue' // 数据报表
 
 Vue.use(VueRouter)
 
@@ -61,6 +61,9 @@ const routes = [{
         }, {
             path: '/orders', // 订单管理
             component: Order
+        }, {
+            path: '/reports', // 数据报表
+            component: Report
         }]
     }
 ]
