@@ -10,6 +10,7 @@ import Cate from '../components/goods/Cate.vue'
 import Params from '../components/goods/Params.vue' // 参数列表
 import GoodsList from '../components/goods/List.vue' // 商品列表
 import Add from '../components/goods/Add.vue' // 商品列表
+import Order from '../components/order/Order.vue' // 订单管理
 
 
 Vue.use(VueRouter)
@@ -57,6 +58,9 @@ const routes = [{
         }, {
             path: '/goods/add', // 商品列表
             component: Add
+        }, {
+            path: '/orders', // 订单管理
+            component: Order
         }]
     }
 ]
