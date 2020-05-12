@@ -370,11 +370,11 @@ export default {
       })
     },
     // 点击按钮, 展示修改的对话框
-    async showEditDialog(attr_id) {
+    async showEditDialog(attrId) {
       const {
         data: res
       } = await this.$http.get(
-        `categories/${this.cateId}/attributes/${attr_id}`,
+        `categories/${this.cateId}/attributes/${attrId}`,
         { params: { attr_sel: this.activeName } }
       )
 
@@ -415,7 +415,7 @@ export default {
       })
     },
     // 根据ID 删除对应的参数信息
-    async removeParamsById(attr_id) {
+    async removeParamsById(attrId) {
       // 弹框 询问参数是否删除数据
       const confirmResult = await this.$confirm(
         '此操作将永久删除该参数, 是否继续?',
@@ -434,7 +434,7 @@ export default {
       }
 
       const { data: res } = await this.$http.delete(
-        `categories/${this.cateId}/attributes/${attr_id}`
+        `categories/${this.cateId}/attributes/${attrId}`
       )
       if (res.meta.status !== 200) {
         return this.$message.error('删除参数失败!')
